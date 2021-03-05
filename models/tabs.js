@@ -1,20 +1,24 @@
 const db = require('./index')
 
-const Tabs = db.sequelize.define('clothes', {
+const Tabs = db.sequelize.define('tabs', {
     id: { 
       primaryKey: true,
       autoIncrement: true,
       type: db.Sequelize.INTEGER
     },
-    img: db.Sequelize.TEXT,
-    name: db.Sequelize.TEXT,
-
+    name:{ 
+      type:db.Sequelize.TEXT,
+      allowNull: false
+    },
+    tab:{ 
+      type:db.Sequelize.TEXT,
+      allowNull:false
+    }
 },{
   freezeTableName: true,
   timestamps: false
-}
-);
-module.exports = User
+});
 
 
-// linked to users, must be logged in?, only input tabs?p
+module.exports = Tabs
+

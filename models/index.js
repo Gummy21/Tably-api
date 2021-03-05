@@ -11,12 +11,17 @@ const sequelize = new Sequelize("tably", process.env.D_USER, process.env.D_PASS,
 })
 
 
-
 let db = {};
 
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+
+
+
+
+
 
 module.exports = db;
 
