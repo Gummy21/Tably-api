@@ -55,7 +55,7 @@ module.exports = (app) => {
     const user = req.query.userid;
     const tab = req.body.tab;
     const name = req.body.name;
-    if (userid == undefined) {
+    if (user == undefined) {
       print("Please login");
     } else {
       const newTab = { name: name, tab: tab, userId: user };
